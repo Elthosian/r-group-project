@@ -14,5 +14,15 @@ admin.site.register(Item)
 admin.site.register(Ownership)
 admin.site.register(Project)
 admin.site.register(Conference)
+
+
+"""class ItemInline(admin.StackedInline):
+    model = Item
+
+class ArticleAdmin(admin.ModelAdmin):
+    inlines = (ItemInline,)
+"""
+
 admin.site.register(Article)
+
 

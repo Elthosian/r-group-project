@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <h2 class="subtitle">Integrantes</h2>
+        <div class="col s12">
+            {% for member in members %}
+
+
+            <div class="col s6">
+                <div class="card horizontal hoverable">
+                    <div class="card-image">
+                        <img class="responsive-img border-circle-right card-picture" src="/media/{{member.picture}} ">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <span class="card-title">{{ member }}</span>
+                            <span class="">{{member.title |safe }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

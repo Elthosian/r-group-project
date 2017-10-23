@@ -13,7 +13,7 @@ class Person(models.Model):
                               default=None, blank=True, null=True,
                               )
     title = models.TextField("Títulos")
-    photo_url = models.URLField("Fotografía", max_length=250, default=None, blank=True, null=True)
+    picture = models.ImageField(upload_to='img/persons', default='img/persons/user-male-default.png')
 
     def __str__(self):
         if self.prefix:
@@ -27,8 +27,7 @@ class Item(models.Model):
     abstract = models.TextField(default=None, blank=True, null=True)
     date = models.DateField(default=None, blank=True, null=True)
     information = models.TextField(default=None, blank=True, null=True)
-    image_url = models.CharField(max_length=250, default=None,
-                                 blank=True, null=True)
+    image= models.ImageField(upload_to='img/items', default='img/items/default.png')
     source = models.TextField(default=None, blank=True, null=True)
     main_project = models.ForeignKey('self', default=None, blank=True, null=True)
 
@@ -38,7 +37,7 @@ class Item(models.Model):
 
 class Project(models.Model):
     item = models.OneToOneField(Item)
-
+    end_date = models.DateField(default=None, blank=True,null=True)
     def __str__(self):
         return self.item.name
 

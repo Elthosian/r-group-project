@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <h2 class="subtitle">Art&iacute;culos</h2>
+    <div class="row">
+        <div class="col s12">
+            <div class="row">
+                {% for article in articles %}
+                <div class="col s4 m4">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img class="responsive-img item-image" src="/media/{{article.item.image}}">
+                            <span class="card-title">{{ article.item.date|date:"M, Y"}}</span>
+                        </div>
+                        <div class="card-content">
+                            <p>{{ article.item.name }}.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="./publicacion.html">Ver m&aacute;s </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

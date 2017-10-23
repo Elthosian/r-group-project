@@ -15,11 +15,22 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 from research_group import views
+
+
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^index/', views.index, name='index'),
     url(r'^about/', views.about, name='about'),
+    url(r'^members/', views.members, name='members'),
+    url(r'^articles/', views.articles, name='articles'),
+    url(r'^projects/', views.projects, name='projects'),
+    url(r'^conferences/', views.conferences, name='conferences'),
     url(r'^admin/', admin.site.urls),
     #url(r'^index/', views.index, name='index'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

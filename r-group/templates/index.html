@@ -1,5 +1,77 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    patata
+<div class="container">
+    <h2 class="subtitle">Publicaciones recientes</h2>
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s4"><a class="active" href="#test1">Art&iacute;culos</a></li>
+                <li class="tab col s4"><a href="#test2">Congresos</a></li>
+                <li class="tab col s4"><a href="#test3">Proyectos</a></li>
+            </ul>
+        </div>
+        <div id="test1" class="col s12">
+            <div class="row">
+                {% for article in articles %}
+                <div class="col s4 m4">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img class="responsive-img item-image" src="/media/{{article.item.image}}">
+                            <span class="card-title">{{ article.item.date|date:"M, Y"}}</span>
+                        </div>
+                        <div class="card-content">
+                            <p>{{ article.item.name }}.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="./publicacion.html">Ver m&aacute;s </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="test2" class="col s12">
+            <div class="row">
+                {% for conference in conferences %}
+                <div class="col s4 m4">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img class="responsive-img item-image" src="/media/{{conference.item.image}}">
+                            <span class="card-title">{{ article.item.date|date:"M, Y"}}</span>
+                        </div>
+                        <div class="card-content">
+                            <p>{{ conference.item.name }}.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="./publicacion.html">Ver m&aacute;s </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="test3" class="col s12">
+            <div class="row">
+                {% for project in projects %}
+                <div class="col s4 m4">
+                    <div class="card hoverable">
+                        <div class="card-image">
+                            <img class="responsive-img item-image" src="/media/{{project.item.image}}">
+                            <span class="card-title">{{ article.item.date|date:"M, Y"}}</span>
+                        </div>
+                        <div class="card-content">
+                            <p>{{ project.item.name }}.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="./publicacion.html">Ver m&aacute;s </a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 {% endblock %}

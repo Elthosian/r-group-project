@@ -1,0 +1,194 @@
+body {
+      padding-left: 255px;
+}
+@media only screen and (max-width : 992px) {
+  body {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px){
+    .banner .button-collapse {
+        display: none !important;
+    }
+}
+
+.title{
+    color: #f5f5f5 !important;
+    font-family: 'Crimson Text' !important;
+    font-weight: 700 !important;
+    margin: 0px 10px !important;
+    text-transform: uppercase !important;
+}
+
+.subtitle{
+    color: black !important;
+    font-family: 'Crimson Text' !important;
+    font-weight: 700 !important;
+    margin: 10px 0px !important;
+    text-transform: capitalize !important;
+}
+
+.banner{
+    background-color: #003668 !important;
+}
+
+.side-nav.fixed{
+    width: 255px !important;
+
+}
+
+.slider .indicators {
+    display: none !important;
+}
+
+.slider .slides li img {
+    height: 176px !important;
+    width: 100% !important;
+    background-size: cover !important;
+    background-position: center top !important;
+}
+
+.slider, .slides {
+    height: 176px !important;
+}
+
+.slider .slides li .caption {
+    top: 15% !important;
+    left: 0% !important;
+    width: 70% !important;
+    background: #65232e !important;
+    opacity: 0.9 !important;
+}
+
+.banner .button-collapse{
+    color: #f5f5f5 !important;
+}
+
+.banner .icon-menu{
+    font-size: 40px !important;
+} 
+
+.side-nav li>a:hover {
+    background-color: #e3aa3b !important;
+}
+
+.background{
+    background-color : #003668 !important;
+}
+
+.side-nav .user-view{
+    height: 245px !important;
+    margin-bottom: 0px !important;
+}
+
+.side-nav .user-view .circle{
+    height: 135px !important;
+    width: 135px !important;
+}
+
+.side-nav .divider {
+    margin: 0px !important;
+}
+
+.side-nav li>a {
+    height: 55px !important;
+    line-height: 55px !important;
+    color: black !important;
+}
+
+.side-nav li>a>i{
+    color: black !important;
+}
+
+.tabs .tab a {
+    color: #003668 !important;
+}
+
+.tabs .tab a:hover{
+    color: #003668;
+    font-weight: 700 !important;
+}
+
+.tabs .tab a.active {
+    color: #003668;
+    font-weight: 700 !important;
+}
+
+.tabs .indicator {
+    background-color: #003668 !important; 
+}
+
+
+.item-image{
+    min-height:270px !important;
+
+}
+
+.card-picture{
+    height: 200px !important;
+    width: 133px !important;
+    padding:5px !important;
+}
+
+.card .card-image .card-title {
+    padding: 10px !important;
+    background: #65232e !important;
+    opacity: 0.9 !important;
+}
+
+
+
+.page-footer {
+    background-color: #003668 !important;
+}
+
+.page-footer #info-footer a {
+    color: white!important;
+}
+
+.page-footer #info-footer a:hover, #links a:hover {
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+}
+
+.border-circle-right{
+    border-right: 3px solid #65232e !important;
+    border-radius: 50% !important;
+}
+
+.publication .row{
+    margin-bottom: 5px !important;
+}
+
+.section {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.margin-5px {
+    margin: 5px 0px !important;
+}
+
+.italic{
+    font-style: italic !important;
+}
+
+.justify{
+    text-align: justify !important;
+}
+
+.table-of-contents a.active {
+    border-left: 2px solid #65232e !important;
+}
+
+.table-of-contents a:hover {
+    border-left: 1px solid #65232e !important;
+}
+
+.publication-img{
+    height: 100px !important;
+    width: 100px !important;
+}
+    
+
