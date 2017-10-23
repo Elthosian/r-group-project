@@ -1,0 +1,10 @@
+Consola en carpeta r-group-project/
+
+>activate venv
+>pip install -r r-group/requirements/local.txt
+>cd r-group
+[asegurate de tener la base de datos r-group creada]
+>python manage.py migrate
+>python manage.py loaddata ../db.json
+>python manage.py runserver
+
