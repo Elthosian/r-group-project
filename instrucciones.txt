@@ -1,5 +1,6 @@
 Consola en carpeta r-group-project/
 
+[si no tienes la carpeta venv en r-group-project, entras a consola y haces pip install virtualenv, luego virtualenv venv y esperas que se cree, si la tienes salta al siguiente paso]
 >activate venv
 >pip install -r r-group/requirements/local.txt
 >cd r-group
