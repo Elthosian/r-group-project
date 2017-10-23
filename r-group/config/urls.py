@@ -29,6 +29,11 @@ urlpatterns = [
     url(r'^articles/', views.articles, name='articles'),
     url(r'^projects/', views.projects, name='projects'),
     url(r'^conferences/', views.conferences, name='conferences'),
+
+    url(r'^articles-(?P<id>\d+)/', views.article, name='article'),
+    url(r'^conferences-(?P<id>\d+)/', views.conference, name='conference'),
+    url(r'^projects-(?P<id>\d+)/', views.project, name='project'),
+
     url(r'^admin/', admin.site.urls),
     #url(r'^index/', views.index, name='index'),
 ]

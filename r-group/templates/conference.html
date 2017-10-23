@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col s10">
+            <div class="publication">
+                <div id="title" class="row section scrollspy">
+                    <h4 class="subtitle">{{conference.item.name}}</h4>
+                </div>
+                <div id="information" class="row section scrollspy">
+                    <div class="col s8">
+                        <strong>Autores:</strong>
+                        <p class="italic margin-5px">
+                            {{authors}}
+                        </p>
+                        <strong>Datos de publicación:</strong>
+                        <p class="italic margin-5px">{{conference.item.information}}</p>
+                        <strong>Fecha inicio:</strong>
+                        <p class="italic margin-5px">{{conference.item.date|date:'d M Y'}}</p>
+                        <strong>Fecha fin:</strong>
+                        <p class="italic margin-5px">{{conference.end_date|date:'d M Y'}}</p>
+                    </div>
+                    <div class="col s4">
+                        <img class="responsive-img publication-img" src="/media/{{conference.item.image}}"/>
+                    </div>
+                </div>
+                <div id="abstract" class="row section scrollspy">
+                    <h5 class="subtitle">Abstract</h5>
+                    <p class="justify">
+                        {{conference.item.abstract}}
+                    </p>
+                </div>
+                <div id="download" class="row section scrollspy">
+                    {% if conference.item.file %}
+                    <a class="italic" href="/media/{{conference.item.file}}">Descargar</a>
+                    {% else %}
+                    <a class="italic" href="#!">Descargar</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col hide-on-small-only s2">
+            <ul class="section table-of-contents">
+                <li><a href="#title">Título</a></li>
+                <li><a href="#information">Información</a></li>
+                <li><a href="#abstract">Abstract</a></li>
+                <li><a href="#download">Descargar</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -12,7 +12,7 @@ class Person(models.Model):
     prefix = models.CharField("Prefijo", max_length=3, choices=PREFIXES,
                               default=None, blank=True, null=True,
                               )
-    title = models.TextField("Títulos")
+    title = models.TextField("Título")
     picture = models.ImageField(upload_to='img/persons', default='img/persons/user-male-default.png')
 
     def __str__(self):
@@ -28,7 +28,7 @@ class Item(models.Model):
     date = models.DateField(default=None, blank=True, null=True)
     information = models.TextField(default=None, blank=True, null=True)
     image= models.ImageField(upload_to='img/items', default='img/items/default.png')
-    source = models.TextField(default=None, blank=True, null=True)
+    file = models.FileField(upload_to='files/items', default=None, blank=True,null=True)
     main_project = models.ForeignKey('self', default=None, blank=True, null=True)
 
     def __str__(self):
@@ -67,7 +67,7 @@ class Ownership(models.Model):
         if self.main:
             return self.person.name + " es autor principal en " + self.item.name
         else:
-            return self.person.name + " es autor principal en " + self.item.name
+            return self.person.name + " es autor en " + self.item.name
 
 
 
