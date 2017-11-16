@@ -57,7 +57,7 @@ body {
     top: 15% !important;
     left: 0% !important;
     width: 70% !important;
-    background: #65232e !important;
+    background: #003668 !important;
     opacity: 0.9 !important;
 }
 
@@ -187,8 +187,15 @@ body {
 }
 
 .publication-img{
-    height: 100px !important;
-    width: 100px !important;
+    height: 200px !important;
+    width: auto !important;
 }
-    
+
+.margin-none{
+    margin: 0px !important;
+} 
+
+.card-content{
+    height: 200px !important;
+}
 
